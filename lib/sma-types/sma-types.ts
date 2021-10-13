@@ -1,0 +1,4 @@
+module SmaTypes {
+}
+
+export = SmaTypes;
