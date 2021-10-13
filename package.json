@@ -8,7 +8,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "find lib/ lambda-data-sources/ -name \"*.js\" -type f -delete && tsc && cdk deploy"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.127.0",
@@ -21,6 +22,9 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-appsync": "^1.127.0",
+    "@aws-cdk/aws-dynamodb": "^1.127.0",
+    "@aws-cdk/aws-lambda": "^1.127.0",
     "@aws-cdk/core": "1.127.0",
     "source-map-support": "^0.5.16"
   }
